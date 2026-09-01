@@ -1,6 +1,8 @@
 # Pocket Server downloads and GitHub Pages
 
-This public repository intentionally contains no Android source code or signing secrets. It contains the static download website, the signed APK, release metadata, and SHA-256 checksums.
+This public repository intentionally contains no Android source code, Cloudflare credentials, or signing secrets. It contains the static download website, the signed universal APK, release metadata, and SHA-256 checksums.
+
+Version 1.1 adds persistent multi-site serving, Tailscale address discovery, and an embedded Cloudflare Tunnel connector. All Cloudflare account data is entered and encrypted locally in the installed app; none belongs in this repository.
 
 ## Publish
 

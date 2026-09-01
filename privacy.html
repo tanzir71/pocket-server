@@ -17,18 +17,25 @@
   <main class="legal">
     <p class="eyebrow">Plain-language privacy note</p>
     <h1>Private by being small.</h1>
-    <p class="summary">Pocket Server contains no advertising, analytics, tracking SDK, account system, or cloud service. It serves files directly from the selected Android folder to authenticated browsers that can reach the phone.</p>
+    <p class="summary">Pocket Server contains no advertising, analytics, tracking SDK, developer-operated account system, or developer-operated cloud service. It serves selected Android folders to authenticated browsers over the routes you enable.</p>
     <h2>Data the app accesses</h2>
-    <p>The app can read files inside the folder you select through Android’s system folder picker. It cannot use that grant to browse unrelated folders. If you enable uploads, authenticated visitors can create files and folders inside the selected folder.</p>
+    <p>Each site can read files inside the folder you select through Android’s system folder picker. A folder grant does not let the app browse unrelated folders. If you enable uploads for a site, authenticated visitors can create files and folders inside that site’s selected folder.</p>
     <h2>Data the app transmits</h2>
-    <p>File names, directory pages, downloads, uploads, and the access password travel between the phone and the visiting browser over your local network. Nothing is intentionally sent to the app developer or a third-party service.</p>
+    <p>File names, directory pages, downloads, uploads, and authorization headers travel between the phone and visiting browsers. Nothing is intentionally sent to the Pocket Server developer. The network providers involved depend on the route you select:</p>
+    <ul>
+      <li><strong>LAN:</strong> traffic goes directly over the local network using HTTP.</li>
+      <li><strong>Tailscale:</strong> the separate Tailscale app carries traffic inside its encrypted network and applies its own account and privacy terms.</li>
+      <li><strong>Cloudflare Tunnel:</strong> Cloudflare terminates public HTTPS and carries requests through the outbound tunnel. Cloudflare can process the request and file content under the Cloudflare account holder’s settings and terms.</li>
+    </ul>
     <h2>Network security</h2>
-    <p>The built-in server uses HTTP Basic authentication over unencrypted HTTP. It is intended only for a trusted home LAN. Do not expose port <code>8080</code> or the configured replacement port to the public internet. Use a unique Pocket Server password.</p>
+    <p>The built-in server uses HTTP Basic authentication. LAN URLs are unencrypted and should be used only on a trusted network. Tailscale encrypts traffic between approved tailnet devices. Cloudflare provides public HTTPS before forwarding through its outbound tunnel. Never expose ports such as <code>8080</code> directly through router port forwarding. Public hostnames require passwords of at least 12 characters, and repeated failed sign-ins are temporarily blocked.</p>
     <h2>Information stored on the phone</h2>
-    <p>The selected folder URI, port, upload preference, and password are stored in the app’s private Android preferences. App backup and device transfer are disabled so those settings are not copied to a cloud backup.</p>
+    <p>Site names, selected folder URIs, ports, upload preferences, hostnames, and site passwords are stored in the app’s private Android preferences. If Cloudflare is enabled, its Account ID, Zone ID, tunnel metadata, and managed hostnames are also stored privately. Cloudflare API and tunnel tokens are encrypted with an AES-GCM key held by Android Keystore. App backup and device transfer are disabled.</p>
+    <h2>Cloudflare configuration traffic</h2>
+    <p>When you enable Cloudflare, Pocket Server sends the Account ID, Zone ID, API token, tunnel configuration, and requested DNS hostnames to Cloudflare’s API. The app creates a dedicated tunnel and manages only CNAME records that target that tunnel. It refuses to overwrite a conflicting DNS record.</p>
     <h2>Removing access</h2>
     <p>Stop the server to end network access immediately. Clear the app’s storage or uninstall it to remove stored settings and Android’s persisted folder permission.</p>
   </main>
-  <footer class="site-footer"><div class="brand"><img src="assets/icon.svg" width="32" height="32" alt=""><span>Pocket Server</span></div><p>No account. No cloud. No tracking.</p><div><a href="index.html">Home</a><a href="downloads/pocket-server-latest.apk">APK</a></div></footer>
+  <footer class="site-footer"><div class="brand"><img src="assets/icon.svg" width="32" height="32" alt=""><span>Pocket Server</span></div><p>No Pocket Server account. No analytics. No tracking.</p><div><a href="index.html">Home</a><a href="downloads/pocket-server-latest.apk">APK</a></div></footer>
 </body>
 </html>

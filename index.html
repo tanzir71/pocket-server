@@ -4,9 +4,9 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#0d3b2e">
-  <meta name="description" content="Turn a spare Android phone into a simple, password-protected file server for your home network.">
+  <meta name="description" content="Turn a spare Android phone into a password-protected multi-site server for your home network, Tailscale, or Cloudflare Tunnel.">
   <meta property="og:title" content="Pocket Server for Android">
-  <meta property="og:description" content="A small home file server that runs entirely on your spare Android phone.">
+  <meta property="og:description" content="Host multiple folder-backed sites over LAN, Tailscale, or HTTPS through Cloudflare Tunnel.">
   <meta property="og:type" content="website">
   <title>Pocket Server — your spare phone, quietly useful</title>
   <link rel="icon" href="assets/icon.svg" type="image/svg+xml">
@@ -31,9 +31,9 @@
   <main id="main">
     <section class="hero" id="top">
       <div class="hero-copy">
-        <p class="eyebrow">A tiny home server, without buying another computer</p>
+        <p class="eyebrow">A multi-site server, without buying another computer</p>
         <h1>Your spare phone,<br><em>quietly useful.</em></h1>
-        <p class="lede">Pocket Server turns an Android phone into a password-protected file server for devices on your home Wi‑Fi. Choose one folder, tap start, and share.</p>
+        <p class="lede">Pocket Server turns an Android phone into a password-protected multi-site server. Share folders at home, reach them privately with Tailscale, or publish selected hostnames through Cloudflare Tunnel.</p>
         <div class="hero-actions">
           <a class="button button-primary" href="downloads/pocket-server-latest.apk" download>
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m0 0 5-5m-5 5-5-5M5 21h14"/></svg>
@@ -41,7 +41,7 @@
           </a>
           <a class="button button-secondary" href="#install">Installation guide</a>
         </div>
-        <p class="release-line">Version <span data-release-version>1.0.0</span> · Android 7.0+ · <span data-release-size>small download</span></p>
+        <p class="release-line">Version <span data-release-version>1.1.0</span> · Android 7.0+ · <span data-release-size>download size</span></p>
       </div>
 
       <div class="phone-stage" aria-label="Pocket Server app preview">
@@ -49,15 +49,15 @@
         <div class="signal signal-two"></div>
         <figure class="phone">
           <div class="speaker"></div>
-          <img src="assets/app-home.png" alt="Pocket Server app showing server status, shared folder, password, port, and start button">
+          <img src="assets/app-home.png" alt="Pocket Server running two independent folder-backed sites with live editing and remote-access settings">
         </figure>
         <div class="floating-note"><span></span> Ready when you are</div>
       </div>
     </section>
 
     <section class="trust-strip" aria-label="Key qualities">
-      <div><strong>LAN only</strong><span>Your files stay on your network</span></div>
-      <div><strong>No account</strong><span>No cloud login or subscription</span></div>
+      <div><strong>Multi-site</strong><span>Independent folders, ports, and passwords</span></div>
+      <div><strong>Private or public</strong><span>LAN, Tailscale, or Cloudflare HTTPS</span></div>
       <div><strong>Read-only first</strong><span>Uploads are disabled by default</span></div>
     </section>
 
@@ -71,20 +71,20 @@
         <article>
           <span class="step-number">01</span>
           <div class="step-icon">⌁</div>
-          <h3>Choose a folder</h3>
-          <p>Android’s own folder picker limits Pocket Server to exactly what you select.</p>
+          <h3>Add your sites</h3>
+          <p>Each site gets one Android-selected folder, its own port, password, and read/write setting.</p>
         </article>
         <article>
           <span class="step-number">02</span>
           <div class="step-icon">●</div>
-          <h3>Tap start</h3>
-          <p>The app shows the address and keeps the server running with a visible notification.</p>
+          <h3>Choose its reach</h3>
+          <p>Use home Wi‑Fi, install Tailscale for private remote access, or assign a Cloudflare hostname.</p>
         </article>
         <article>
           <span class="step-number">03</span>
           <div class="step-icon">↗</div>
-          <h3>Open it anywhere at home</h3>
-          <p>Enter the address in a browser on another device and sign in with your Pocket Server password.</p>
+          <h3>Keep changing it live</h3>
+          <p>Add or edit sites while the server runs. Only the changed listener refreshes; the others stay available.</p>
         </article>
       </div>
     </section>
@@ -92,19 +92,21 @@
     <section class="section split" id="security">
       <div>
         <p class="eyebrow">Small permission surface</p>
-        <h2>Your folder. Your network. Your rules.</h2>
-        <p class="section-copy">Pocket Server does not include analytics, ads, cloud storage, or remote-control services. It asks Android for access to one chosen folder and serves that folder only while you keep the server running.</p>
+        <h2>Your folders. Your routes. Your rules.</h2>
+        <p class="section-copy">Pocket Server does not include analytics, ads, or its own cloud storage. Android grants each site access only to its selected folder. Remote access remains off until you configure Tailscale or Cloudflare.</p>
         <ul class="check-list">
-          <li>Password required for every browser session</li>
+          <li>A separate password protects every site</li>
           <li>Downloads enabled; uploads off until you allow them</li>
+          <li>Failed public sign-ins are rate-limited and temporarily blocked</li>
+          <li>Cloudflare credentials are encrypted with Android Keystore</li>
           <li>Persistent notification with an immediate stop action</li>
           <li>Signing checksum published beside every APK</li>
         </ul>
       </div>
       <aside class="honest-card">
-        <p class="card-label">Good to know</p>
-        <h3>Designed for trusted home Wi‑Fi</h3>
-        <p>The local web connection uses HTTP, not HTTPS. Do not expose the port to the public internet, and do not reuse an important password.</p>
+        <p class="card-label">Internet access is opt-in</p>
+        <h3>No router port forwarding</h3>
+        <p>Tailscale carries private traffic inside its encrypted network. Cloudflare Tunnel makes an outbound connection and provides HTTPS at your chosen hostname. Never forward a Pocket Server port directly from your router.</p>
         <a href="privacy.html">Read the privacy note →</a>
       </aside>
     </section>
@@ -125,13 +127,13 @@
         </li>
         <li>
           <span>3</span>
-          <div><h3>Open Pocket Server</h3><p>Choose a folder, keep the phone on trusted Wi‑Fi and power, then tap <strong>Start server</strong>.</p></div>
+          <div><h3>Add sites and choose their routes</h3><p>Select folders, keep the phone on power, then use LAN addresses immediately or configure Tailscale and Cloudflare from the app.</p></div>
         </li>
       </ol>
       <div class="download-panel">
         <div>
           <img src="assets/icon.svg" width="56" height="56" alt="">
-          <div><strong>Pocket Server <span data-release-version>1.0.0</span></strong><span>Android 7.0 and newer</span></div>
+          <div><strong>Pocket Server <span data-release-version>1.1.0</span></strong><span>Android 7.0 and newer · Tailscale requires Android 8.0+</span></div>
         </div>
         <a class="button button-primary" href="downloads/pocket-server-latest.apk" download>Download APK</a>
         <button class="checksum" type="button" data-copy-checksum aria-label="Copy APK SHA-256 checksum">
@@ -153,7 +155,11 @@
         </details>
         <details>
           <summary>Can people reach it from the internet?</summary>
-          <p>Not by default, intentionally. Pocket Server is for the local network. Do not forward its port from your router.</p>
+          <p>Yes. Tailscale gives your approved devices private encrypted access. Cloudflare Tunnel gives selected sites an HTTPS hostname using Cloudflare account details you provide. Direct router port forwarding remains unsupported.</p>
+        </details>
+        <details>
+          <summary>Can it host more than one folder or site?</summary>
+          <p>Yes. Every site has an independent folder, port, password, upload policy, and optional public hostname. Changes apply while the other sites continue serving.</p>
         </details>
         <details>
           <summary>Will it keep running with the screen off?</summary>
