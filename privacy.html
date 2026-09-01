@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0d3b2e">
+  <meta name="description" content="Pocket Server privacy and network-security information.">
+  <title>Privacy — Pocket Server</title>
+  <link rel="icon" href="assets/icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .legal{width:min(760px,calc(100% - 40px));margin:60px auto 110px}.legal h1{font-size:clamp(2.8rem,6vw,4.8rem)}.legal h2{font-size:1.55rem;margin-top:46px}.legal p,.legal li{color:var(--muted)}.legal .summary{margin:28px 0;padding:24px;border-radius:20px;background:var(--cream);color:var(--forest);font-weight:700}.legal code{font-family:ui-monospace,'Cascadia Mono',monospace;font-size:.86em}
+  </style>
+</head>
+<body>
+  <header class="site-header"><a class="brand" href="index.html"><img src="assets/icon.svg" width="38" height="38" alt=""><span>Pocket Server</span></a><a href="index.html">← Back home</a></header>
+  <main class="legal">
+    <p class="eyebrow">Plain-language privacy note</p>
+    <h1>Private by being small.</h1>
+    <p class="summary">Pocket Server contains no advertising, analytics, tracking SDK, account system, or cloud service. It serves files directly from the selected Android folder to authenticated browsers that can reach the phone.</p>
+    <h2>Data the app accesses</h2>
+    <p>The app can read files inside the folder you select through Android’s system folder picker. It cannot use that grant to browse unrelated folders. If you enable uploads, authenticated visitors can create files and folders inside the selected folder.</p>
+    <h2>Data the app transmits</h2>
+    <p>File names, directory pages, downloads, uploads, and the access password travel between the phone and the visiting browser over your local network. Nothing is intentionally sent to the app developer or a third-party service.</p>
+    <h2>Network security</h2>
+    <p>The built-in server uses HTTP Basic authentication over unencrypted HTTP. It is intended only for a trusted home LAN. Do not expose port <code>8080</code> or the configured replacement port to the public internet. Use a unique Pocket Server password.</p>
+    <h2>Information stored on the phone</h2>
+    <p>The selected folder URI, port, upload preference, and password are stored in the app’s private Android preferences. App backup and device transfer are disabled so those settings are not copied to a cloud backup.</p>
+    <h2>Removing access</h2>
+    <p>Stop the server to end network access immediately. Clear the app’s storage or uninstall it to remove stored settings and Android’s persisted folder permission.</p>
+  </main>
+  <footer class="site-footer"><div class="brand"><img src="assets/icon.svg" width="32" height="32" alt=""><span>Pocket Server</span></div><p>No account. No cloud. No tracking.</p><div><a href="index.html">Home</a><a href="downloads/pocket-server-latest.apk">APK</a></div></footer>
+</body>
+</html>

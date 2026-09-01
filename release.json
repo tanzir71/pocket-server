@@ -1,0 +1,11 @@
+{
+  "name": "Pocket Server",
+  "version": "1.0.0",
+  "versionCode": 1,
+  "packageName": "io.github.tanzir71.pocketserver",
+  "minimumAndroid": "7.0",
+  "sha256": "e3d907559f4fa400a220ee42293a79701c9addb4e1d7b17181815c5e3b4e78b5",
+  "sizeBytes": 1385276,
+  "file": "pocket-server-v1.0.0.apk",
+  "builtAtUtc": "2026-09-01T10:38:55.2385818Z"
+}

@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0d3b2e">
+  <meta name="description" content="Turn a spare Android phone into a simple, password-protected file server for your home network.">
+  <meta property="og:title" content="Pocket Server for Android">
+  <meta property="og:description" content="A small home file server that runs entirely on your spare Android phone.">
+  <meta property="og:type" content="website">
+  <title>Pocket Server — your spare phone, quietly useful</title>
+  <link rel="icon" href="assets/icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="Pocket Server home">
+      <img src="assets/icon.svg" width="38" height="38" alt="">
+      <span>Pocket Server</span>
+    </a>
+    <nav aria-label="Primary navigation">
+      <a href="#how-it-works">How it works</a>
+      <a href="#security">Security</a>
+      <a href="#install">Install</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top">
+      <div class="hero-copy">
+        <p class="eyebrow">A tiny home server, without buying another computer</p>
+        <h1>Your spare phone,<br><em>quietly useful.</em></h1>
+        <p class="lede">Pocket Server turns an Android phone into a password-protected file server for devices on your home Wi‑Fi. Choose one folder, tap start, and share.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="downloads/pocket-server-latest.apk" download>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m0 0 5-5m-5 5-5-5M5 21h14"/></svg>
+            Download APK
+          </a>
+          <a class="button button-secondary" href="#install">Installation guide</a>
+        </div>
+        <p class="release-line">Version <span data-release-version>1.0.0</span> · Android 7.0+ · <span data-release-size>small download</span></p>
+      </div>
+
+      <div class="phone-stage" aria-label="Pocket Server app preview">
+        <div class="signal signal-one"></div>
+        <div class="signal signal-two"></div>
+        <figure class="phone">
+          <div class="speaker"></div>
+          <img src="assets/app-home.png" alt="Pocket Server app showing server status, shared folder, password, port, and start button">
+        </figure>
+        <div class="floating-note"><span></span> Ready when you are</div>
+      </div>
+    </section>
+
+    <section class="trust-strip" aria-label="Key qualities">
+      <div><strong>LAN only</strong><span>Your files stay on your network</span></div>
+      <div><strong>No account</strong><span>No cloud login or subscription</span></div>
+      <div><strong>Read-only first</strong><span>Uploads are disabled by default</span></div>
+    </section>
+
+    <section class="section how" id="how-it-works">
+      <div class="section-heading">
+        <p class="eyebrow">Three calm steps</p>
+        <h2>From drawer phone to useful server</h2>
+        <p>No terminal, root access, or Linux knowledge required.</p>
+      </div>
+      <div class="steps">
+        <article>
+          <span class="step-number">01</span>
+          <div class="step-icon">⌁</div>
+          <h3>Choose a folder</h3>
+          <p>Android’s own folder picker limits Pocket Server to exactly what you select.</p>
+        </article>
+        <article>
+          <span class="step-number">02</span>
+          <div class="step-icon">●</div>
+          <h3>Tap start</h3>
+          <p>The app shows the address and keeps the server running with a visible notification.</p>
+        </article>
+        <article>
+          <span class="step-number">03</span>
+          <div class="step-icon">↗</div>
+          <h3>Open it anywhere at home</h3>
+          <p>Enter the address in a browser on another device and sign in with your Pocket Server password.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section split" id="security">
+      <div>
+        <p class="eyebrow">Small permission surface</p>
+        <h2>Your folder. Your network. Your rules.</h2>
+        <p class="section-copy">Pocket Server does not include analytics, ads, cloud storage, or remote-control services. It asks Android for access to one chosen folder and serves that folder only while you keep the server running.</p>
+        <ul class="check-list">
+          <li>Password required for every browser session</li>
+          <li>Downloads enabled; uploads off until you allow them</li>
+          <li>Persistent notification with an immediate stop action</li>
+          <li>Signing checksum published beside every APK</li>
+        </ul>
+      </div>
+      <aside class="honest-card">
+        <p class="card-label">Good to know</p>
+        <h3>Designed for trusted home Wi‑Fi</h3>
+        <p>The local web connection uses HTTP, not HTTPS. Do not expose the port to the public internet, and do not reuse an important password.</p>
+        <a href="privacy.html">Read the privacy note →</a>
+      </aside>
+    </section>
+
+    <section class="section install" id="install">
+      <div class="install-heading">
+        <p class="eyebrow">Install safely</p>
+        <h2>One APK. One minute.</h2>
+      </div>
+      <ol class="install-list">
+        <li>
+          <span>1</span>
+          <div><h3>Download the APK</h3><p>Use the button below directly on the Android phone you want to turn into a server.</p></div>
+        </li>
+        <li>
+          <span>2</span>
+          <div><h3>Allow this installation</h3><p>If Android asks, allow your browser to install this one unknown app. You can turn that permission off again afterward.</p></div>
+        </li>
+        <li>
+          <span>3</span>
+          <div><h3>Open Pocket Server</h3><p>Choose a folder, keep the phone on trusted Wi‑Fi and power, then tap <strong>Start server</strong>.</p></div>
+        </li>
+      </ol>
+      <div class="download-panel">
+        <div>
+          <img src="assets/icon.svg" width="56" height="56" alt="">
+          <div><strong>Pocket Server <span data-release-version>1.0.0</span></strong><span>Android 7.0 and newer</span></div>
+        </div>
+        <a class="button button-primary" href="downloads/pocket-server-latest.apk" download>Download APK</a>
+        <button class="checksum" type="button" data-copy-checksum aria-label="Copy APK SHA-256 checksum">
+          SHA-256 <code data-release-sha>loading…</code><span>Copy</span>
+        </button>
+      </div>
+      <p class="verification-note">On Android 17 and newer, Android may also ask for local-network access. Future broad distribution may require the developer and package name to be registered through Android developer verification; APK hosting remains here on GitHub.</p>
+    </section>
+
+    <section class="section faq">
+      <div class="section-heading compact">
+        <p class="eyebrow">Useful limits</p>
+        <h2>What Pocket Server is—and isn’t</h2>
+      </div>
+      <div class="faq-grid">
+        <details>
+          <summary>Can it replace a Raspberry Pi?</summary>
+          <p>For simple file sharing, often yes. It is not a Docker host, a multi-drive NAS, or a good choice for heavy media transcoding.</p>
+        </details>
+        <details>
+          <summary>Can people reach it from the internet?</summary>
+          <p>Not by default, intentionally. Pocket Server is for the local network. Do not forward its port from your router.</p>
+        </details>
+        <details>
+          <summary>Will it keep running with the screen off?</summary>
+          <p>The foreground service and Wi‑Fi lock are designed for that. Some manufacturers still apply aggressive battery controls, so exclude Pocket Server from battery optimization if needed.</p>
+        </details>
+        <details>
+          <summary>Why does Android warn about the APK?</summary>
+          <p>The app is downloaded from GitHub instead of an app store. Confirm the SHA-256 checksum above if you want to verify the file before installing.</p>
+        </details>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="brand"><img src="assets/icon.svg" width="32" height="32" alt=""><span>Pocket Server</span></div>
+    <p>A small home server made from hardware you already own.</p>
+    <div><a href="privacy.html">Privacy</a><a href="downloads/pocket-server-latest.apk">APK</a><a href="downloads/pocket-server-latest.apk.sha256">Checksum</a></div>
+  </footer>
+</body>
+</html>
